@@ -6,6 +6,9 @@ import { HttpModule} from '@angular/http'
 import { AppComponent } from './app.component';
 import { FlightDataComponent } from './flight-data/flight-data.component';
 
+//Services
+import { GetFlightInfoService } from './flight-data/get-flight-info.service';
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -13,9 +16,10 @@ import { FlightDataComponent } from './flight-data/flight-data.component';
   ],
   imports: [
     BrowserModule,
-    FormsModule
+    FormsModule,
+    HttpModule
   ],
-  providers: [],
+  providers: [GetFlightInfoService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

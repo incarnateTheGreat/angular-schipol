@@ -1,8 +1,25 @@
 <p>
   {{title}}
 </p>
-<ul>
+<div>
+  <input type='text'
+         value=''
+         placeholder='Enter a Flight Number'
+         [(ngModel)]="flightNumberInput" />
+  <button (click)='searchFlight()'>Click</button>
+</div>
+<div class="">
+  <h3>{{flightNumber}}</h3>
+</div>
+<div>
+  <h2>{{this.flightNumberData.flightIdent}}</h2>
+  <h3 [innerHTML]='this.flightNumberData.route'>{{this.flightNumberData.route}}</h3>
+  <p>{{this.flightNumberData.flightDirection}}</p>
+  <p>{{this.flightNumberData.terminal}}</p>
+  <p>{{this.flightNumberData.gate}}</p>
+</div>
+<!-- <ul>
   <li *ngFor='let airline of airlines'>
     {{airline}}
   </li>
-</ul>
+</ul> -->
