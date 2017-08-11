@@ -1,0 +1,26 @@
+<div>
+  <table>
+    <tr>
+      <th (click)='sortColumn("flightName")'>Ident</th>
+      <th (click)='sortColumn("flightDirection")'>State</th>
+      <th (click)='sortColumn("terminal")'>Terminal</th>
+      <th (click)='sortColumn("gate")'>Gate</th>
+      <th (click)='sortColumn("serviceType")'>Service Type</th>
+      <th (click)='sortColumn("scheduleDate")'>Date</th>
+      <th (click)='sortColumn("scheduleTime")'>Time</th>
+      <th (click)='sortColumn("iatamain")'>Aircraft Type</th>
+      <th (click)='sortColumn("aircraftRegistration")'>Aircraft Registration</th>
+    </tr>
+    <tr *ngFor='let flightInfo of flights'>
+      <td>{{flightInfo.flightName}}</td>
+      <td>{{(flightInfo.flightDirection === 'D' ? 'Departure' : 'Arrival')}}</td>
+      <td>{{flightInfo.terminal}}</td>
+      <td>{{flightInfo.gate}}</td>
+      <td>{{flightInfo.serviceType}}</td>
+      <td>{{flightInfo.scheduleDate}}</td>
+      <td>{{flightInfo.scheduleTime}}</td>
+      <td>{{flightInfo.aircraftType.iatamain}}</td>
+      <td>{{flightInfo.aircraftRegistration}}</td>
+    </tr>
+  </table>
+</div>

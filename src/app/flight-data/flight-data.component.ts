@@ -2,7 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import _ from 'lodash';
 
 //Services
-import { GetFlightInfoService } from './get-flight-info.service';
+import { GetFlightInfoService } from '../services/get-flight-info.service';
 
 @Component({
   selector: 'app-flight-data',
@@ -34,7 +34,6 @@ export class FlightDataComponent implements OnInit {
   ngOnInit() {
     this.dataService.getInfo().subscribe((data) => {
       this.flights = data.flights;
-      console.log(this.flights)
     })
   }
 

@@ -5,14 +5,16 @@ import { HttpModule} from '@angular/http'
 
 import { AppComponent } from './app.component';
 import { FlightDataComponent } from './flight-data/flight-data.component';
+import { DisplayListFlightsComponent } from './display-list-flights/display-list-flights.component';
 
 //Services
-import { GetFlightInfoService } from './flight-data/get-flight-info.service';
+import { GetFlightInfoService } from './services/get-flight-info.service';
 
 @NgModule({
   declarations: [
     AppComponent,
-    FlightDataComponent
+    FlightDataComponent,
+    DisplayListFlightsComponent
   ],
   imports: [
     BrowserModule,
