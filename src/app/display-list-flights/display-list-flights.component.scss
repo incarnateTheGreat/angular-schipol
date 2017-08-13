@@ -1,6 +1,7 @@
 table {
   width: 100%;
   tr {
+    transition: background-color 0.1s linear;
     tr:nth-child(even) { background: #CCC }
     tr:nth-child(odd) { background: #FFF }
     td { padding: 5px }
