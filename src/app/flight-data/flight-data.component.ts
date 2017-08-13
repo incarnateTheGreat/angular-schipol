@@ -46,6 +46,8 @@ export class FlightDataComponent implements OnInit {
       return flight.flightName == self.flightNumberInput.toUpperCase().replace(/ /g, '');
     });
 
+    if(_.isUndefined(flightInfo)) return;
+
     this.flightNumberData = {
       'flightIdent': flightInfo.flightName,
       'flightDirection': (flightInfo.flightDirection === 'D' ? 'Departure' : 'Arrival'),
