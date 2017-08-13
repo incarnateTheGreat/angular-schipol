@@ -1,17 +1,17 @@
-<div>
-  <table>
+<div [@listAnimation]='flights.length'>
+  <table *ngIf='flights'>
     <tr>
-      <th (click)='sortColumn("flightName")'>Ident</th>
-      <th (click)='sortColumn("flightDirection")'>State</th>
-      <th (click)='sortColumn("terminal")'>Terminal</th>
-      <th (click)='sortColumn("gate")'>Gate</th>
-      <th (click)='sortColumn("serviceType")'>Service Type</th>
-      <th (click)='sortColumn("scheduleDate")'>Date</th>
-      <th (click)='sortColumn("scheduleTime")'>Time</th>
-      <th (click)='sortColumn("iatamain")'>Aircraft Type</th>
-      <th (click)='sortColumn("aircraftRegistration")'>Aircraft Registration</th>
+      <th (click)='sortColumn("flightName", $event)'>Ident <span></span></th>
+      <th (click)='sortColumn("flightDirection", $event)'>State <span></span></th>
+      <th (click)='sortColumn("terminal", $event)'>Terminal <span></span></th>
+      <th (click)='sortColumn("gate", $event)'>Gate <span></span></th>
+      <th (click)='sortColumn("serviceType", $event)'>Service Type <span></span></th>
+      <th (click)='sortColumn("scheduleDate", $event)'>Date <span></span></th>
+      <th (click)='sortColumn("scheduleTime", $event)'>Time <span></span></th>
+      <th (click)='sortColumn("aircraftType.iatamain", $event)'>Aircraft Type <span></span></th>
+      <th (click)='sortColumn("aircraftRegistration", $event)'>Aircraft Registration <span></span></th>
     </tr>
-    <tr *ngFor='let flightInfo of flights'>
+    <tr *ngFor='let flightInfo of flights' (click)='showFlightInfo(flightInfo)'>
       <td>{{flightInfo.flightName}}</td>
       <td>{{(flightInfo.flightDirection === 'D' ? 'Departure' : 'Arrival')}}</td>
       <td>{{flightInfo.terminal}}</td>
