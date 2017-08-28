@@ -35,7 +35,8 @@ export class DisplayListFlightsComponent implements OnInit {
       if(!_.isNull(this.flights)) {
         console.log(this.flights);
       }
-    })
+    },
+    error => console.log(error))
   }
 
   sortColumn(column, e) {
