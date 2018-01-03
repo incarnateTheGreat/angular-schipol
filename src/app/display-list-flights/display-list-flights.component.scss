@@ -1,9 +1,12 @@
 table {
   width: 100%;
   tr {
+		--even: #CCC;
+		--odd: #FFF;
+
     transition: background-color 0.1s linear;
-    tr:nth-child(even) { background: #CCC }
-    tr:nth-child(odd) { background: #FFF }
+    &:nth-child(even) { background: var(--even) }
+    &:nth-child(odd) { background: var(--odd) }
     td { padding: 5px }
     th {
       cursor: pointer;
@@ -14,7 +17,7 @@ table {
       }
     }
     &:hover {
-      background: #CCC;
+      background: var(--even);
       cursor: pointer;
     }
   }

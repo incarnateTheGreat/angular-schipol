@@ -22,7 +22,7 @@ export class GetFlightInfoService {
 
   getInfo() {
     const headers = new Headers(),
-          url = 'http://' + this.options.hostname + this.options.path;
+          url = 'https://' + this.options.hostname + this.options.path;
 
     this.createAuthorizationHeader(headers);
 

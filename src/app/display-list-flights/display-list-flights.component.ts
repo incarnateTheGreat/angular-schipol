@@ -16,7 +16,7 @@ import { GetFlightInfoService } from '../services/get-flight-info.service';
         query(':enter', style({ opacity: 0 })),
 
         // starts to animate things with a stagger in between
-        query(':enter', stagger('50ms', [
+        query(':enter', stagger('25ms', [
           animate('500ms', style({ opacity: 1 }))
         ]))
       ])
